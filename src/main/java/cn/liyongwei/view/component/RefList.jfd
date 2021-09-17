@@ -1,0 +1,89 @@
+JFDML JFormDesigner: "7.0.1.0.272" Java: "11.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+			"axis": 1
+		} ) {
+			name: "this"
+			"minimumSize": new java.awt.Dimension( 350, 70 )
+			"preferredSize": new java.awt.Dimension( 400, 472 )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class net.miginfocom.swing.MigLayout ) {
+				"$layoutConstraints": "hidemode 3,alignx center,gapy 10"
+				"$columnConstraints": "[fill][fill][fill]"
+				"$rowConstraints": "[]"
+			} ) {
+				name: "panel1"
+				"minimumSize": new java.awt.Dimension( 2147483647, 50 )
+				"maximumSize": new java.awt.Dimension( 2147483647, 50 )
+				"preferredSize": new java.awt.Dimension( 2147483647, 45 )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "refNameTxt"
+					"minimumSize": new java.awt.Dimension( 200, 30 )
+					"maximumSize": new java.awt.Dimension( 1000, 30 )
+					"toolTipText": "文献标题或摘要片段"
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 0 0"
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "refTypeCB"
+					"maximumSize": new java.awt.Dimension( 70, 32767 )
+					"minimumSize": new java.awt.Dimension( 70, 30 )
+					auxiliary() {
+						"JavaCodeGenerator.typeParameters": "RefType"
+					}
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 1 0"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button1"
+					"text": "搜索"
+					"maximumSize": new java.awt.Dimension( 70, 30 )
+					"minimumSize": new java.awt.Dimension( 70, 30 )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "searchActionPerformed", true ) )
+				}, new FormLayoutConstraints( class net.miginfocom.layout.CC ) {
+					"value": "cell 2 0"
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "table1"
+					"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+						add( "id" )
+						add( "标题" )
+						add( "作者" )
+						add( "类型" )
+						add( "日期" )
+					}, new java.util.Vector {
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+					}, new java.util.Vector {
+						add( false )
+						add( false )
+						add( false )
+						add( false )
+						add( false )
+					}, new java.util.Vector {
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+					} )
+					"rowSorter": sfield com.jformdesigner.model.FormObject NULL_VALUE
+					"autoCreateRowSorter": true
+					"selectionMode": 0
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mousePressed", "table1MousePressed", true ) )
+				} )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 545, 495 )
+		} )
+	}
+}

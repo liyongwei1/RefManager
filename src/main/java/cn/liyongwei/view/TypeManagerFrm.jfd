@@ -1,0 +1,61 @@
+JFDML JFormDesigner: "7.0.1.0.272" Java: "11.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :p:78:p, par l {comp textField1::l:p:341:p, comp scrollPane1:::p:341:p}, space ::79:x}, seq l {space :p:110:p, comp button1:::p::p, space ::125:x, comp button2:::p::p, space :p:107:p}}"
+			"$verticalGroup": "par l {seq l {space :p:25:p, comp scrollPane1:::p:184:p, space s:::p, comp textField1:::p::p, space s:::p, par b {comp button1::b:p::p, comp button2::b:p::p}, space ::33:x}}"
+		} ) {
+			name: "this"
+			"title": "文献类型管理"
+			"$locationPolicy": 1
+			"$sizePolicy": 1
+			"defaultCloseOperation": 2
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "table1"
+					"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector {
+						add( new java.util.Vector {
+							add( null )
+							add( null )
+						} )
+						add( new java.util.Vector {
+							add( null )
+							add( null )
+						} )
+					}, new java.util.Vector {
+						add( "id" )
+						add( "类型" )
+					}, new java.util.Vector {
+						add( null )
+						add( null )
+					}, new java.util.Vector {
+						add( false )
+						add( false )
+					}, new java.util.Vector {
+						add( null )
+						add( null )
+					} )
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "新增"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1ActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button2"
+				"text": "删除"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button2ActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField1"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 500, 370 )
+		} )
+	}
+}

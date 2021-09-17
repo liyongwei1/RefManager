@@ -1,0 +1,131 @@
+JFDML JFormDesigner: "7.0.1.0.272" Java: "11.0.10" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"$locationPolicy": 1
+			"title": "文献管理系统"
+			"iconImage": new com.jformdesigner.model.SwingIcon( 0, "/images/logo.png" )
+			"defaultCloseOperation": 3
+			"minimumSize": new java.awt.Dimension( 1000, 800 )
+			"$sizePolicy": 1
+			add( new FormContainer( "javax.swing.JToolBar", new FormLayoutManager( class javax.swing.JToolBar ) ) {
+				name: "toolBar1"
+				"floatable": false
+				"orientation": 1
+				"maximumSize": new java.awt.Dimension( 80, 2000 )
+				"minimumSize": new java.awt.Dimension( 80, 600 )
+				"preferredSize": new java.awt.Dimension( 80, 600 )
+				"margin": new java.awt.Insets( 2, 2, 2, 2 )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button1"
+					"text": "文献"
+					"maximumSize": new java.awt.Dimension( 80, 80 )
+					"minimumSize": new java.awt.Dimension( 80, 80 )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button1ActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button2"
+					"text": "收藏"
+					"maximumSize": new java.awt.Dimension( 80, 80 )
+					"minimumSize": new java.awt.Dimension( 80, 80 )
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button2ActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "button3"
+					"text": "引用"
+					"maximumSize": new java.awt.Dimension( 80, 80 )
+					"minimumSize": new java.awt.Dimension( 80, 80 )
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "West"
+			} )
+			add( new FormContainer( "javax.swing.JSplitPane", new FormLayoutManager( class javax.swing.JSplitPane ) ) {
+				name: "splitPane1"
+				"continuousLayout": true
+				"dividerLocation": 400
+				"dividerSize": 7
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.CardLayout ) ) {
+					name: "panel1"
+					add( new FormComponent( "cn.liyongwei.view.component.RefList" ) {
+						name: "refList1"
+					}, new FormLayoutConstraints( class java.lang.String ) {
+						"value": "card1"
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "left"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.CardLayout ) ) {
+					name: "panel2"
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "right"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+			menuBar: new FormContainer( "javax.swing.JMenuBar", new FormLayoutManager( class javax.swing.JMenuBar ) ) {
+				name: "menuBar1"
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "menu1"
+					"text": "文件"
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "menuItemNewRef"
+						"text": "新建文献"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "menuItemNewRefActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "menuItem5"
+						"text": "批量导入文献"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "menuItem5ActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JSeparator" ) {
+						name: "separator1"
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "menuItem6"
+						"text": "文献类型管理"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "menuItem6ActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JSeparator" ) {
+						name: "separator3"
+					} )
+					add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+						name: "menu3"
+						"text": "设置"
+						add( new FormComponent( "javax.swing.JMenuItem" ) {
+							name: "menuItem7"
+							"text": "外部阅读器路径"
+							addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "externalReaderActionPerformed", true ) )
+						} )
+					} )
+					add( new FormComponent( "javax.swing.JSeparator" ) {
+						name: "separator2"
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "menuItem1"
+						"text": "注销"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "returnLoginActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "menuItem2"
+						"text": "退出"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "exitsActionPerformed", true ) )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "menu2"
+					"text": "帮助"
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "menuItem3"
+						"text": "关于"
+					} )
+				} )
+			}
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 620, 500 )
+		} )
+	}
+}
